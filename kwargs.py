@@ -5,4 +5,6 @@ def student_details(sid,sname,**marks):
         percent=sum(marks.values())/len(marks)
         print(f'{sname} secured {percent}% marks in exam')
 
-student_details(165,'sarthak',wt=70,dbms=76,ada=81) 
+student_details(165,'sarthak',wt=70,dbms=76,ada=81)
+
+print("abhimanyu")
