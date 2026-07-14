@@ -3,8 +3,6 @@ def student_details(sid,sname,**marks):
         print(f'{sname} was absent in exam')
     else:
         percent=sum(marks.values())/len(marks)
-        print(f'{sname} secured {percent}% marks in exam')
+        print(f'{sid} {sname} secured {percent}% marks in exam')
 
 student_details(165,'sarthak',wt=70,dbms=76,ada=81)
-
-print("abhimanyu")
