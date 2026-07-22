@@ -17,11 +17,11 @@ class Student:
         self.roll=roll
 
     def study(self,n):
-        print(f"the student studies for {n} hours a day")
+        print(f"the student studies for {n} hours a day in {self.college_name}")
 
     @classmethod
     def greet(cls):
-        print("hello")
+        print(f"hello from {cls.college_name}")
 
 
 s1=Student('john',100)
