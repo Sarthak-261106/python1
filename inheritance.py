@@ -13,12 +13,12 @@ class Vehicle:
 # print(v1.get_details())
 
 class Car(Vehicle):
-    def __init__(self,car_type,drive_type):
+    def __init__(self,car_type,drive_type,wheels,seats,mileage):
         print('init of car')
         self.car_type=car_type
         self.drive_type=drive_type
-        super().__init__(4,5,20)
+        super().__init__(wheels,seats,mileage)
 
-c1=Car('sidan','manual')
+c1=Car('sidan','manual',4,7,22)
 print(c1.get_details())
 print(c1.__dict__)
