@@ -72,6 +72,30 @@ option_2=ttk.Radiobutton(text='Female',variable=radio_value,value='female',comma
 option_1.pack()
 option_2.pack()
 
+selected_country=tk.StringVar()
+countries=ttk.Combobox(textvariable=selected_country, values=('aus','ind','us','japan','china'))
+countries['state']='readonly'
+countries.pack()
 
+def display_country(event):
+    country_label=ttk.Label(text=selected_country.get())
+    country_label.pack()
+    print(selected_country.get())
+
+countries.bind('<<ComboboxSelected>>',display_country)
+
+
+pets=('dog','cat','rabbit','mouse')
+fav_pet=tk.StringVar(value=pets)
+
+pet_list=tk.Listbox(listvariable=fav_pet,height=5,selectmode='extended')
+pet_list.pack()
+
+def get_fav_pet(event):
+    pet_indices= pet_list.curselection()
+    for i in pet_indices:
+        print(pet_list.get(i))
+
+pet_list.bind('<<ListboxSelect>>',get_fav_pet)
 
 window.mainloop()
